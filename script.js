@@ -61,26 +61,26 @@ function initSmoothScrolling() {
     // Hero button smooth scrolling (if buttons exist)
     const heroButtons = document.querySelectorAll('.hero-buttons .btn');
     if (heroButtons.length > 0) {
-        heroButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                if (this.textContent === 'Enroll Now') {
-                    // Scroll to contact section for enrollment
-                    const contactSection = document.querySelector('#contact');
-                    const offsetTop = contactSection.offsetTop - 80;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                } else if (this.textContent === 'Learn More') {
-                    const aboutSection = document.querySelector('#about');
-                    const offsetTop = aboutSection.offsetTop - 80;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+    heroButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (this.textContent === 'Enroll Now') {
+                // Scroll to contact section for enrollment
+                const contactSection = document.querySelector('#contact');
+                const offsetTop = contactSection.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            } else if (this.textContent === 'Learn More') {
+                const aboutSection = document.querySelector('#about');
+                const offsetTop = aboutSection.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         });
+    });
     }
 }
 

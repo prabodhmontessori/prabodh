@@ -676,22 +676,23 @@ section {
 }
 
 .principal-section {
+    height: 100%;
+    min-height: 350px;
+    padding: 2.5rem 1.5rem;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 25px;
+    margin-right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 2.5rem;
-    height: 100%;
-    min-height: 450px;
-    position: relative;
     text-align: center;
     background: linear-gradient(135deg, rgba(135, 206, 250, 0.08) 0%, rgba(230, 230, 250, 0.08) 100%);
-    padding: 2.5rem 2.5rem 2.5rem 2rem;
-    border-radius: 25px 0 0 25px;
     border: 1px solid rgba(135, 206, 250, 0.15);
-    transition: all 0.3s ease;
-    justify-content: center;
-    margin-right: -1.5rem;
     backdrop-filter: blur(10px);
+    box-sizing: border-box;
 }
 
 .principal-section:hover {
@@ -700,9 +701,11 @@ section {
     border-color: rgba(135, 206, 250, 0.25);
 }
 
+/* Principal image box */
 .principal-image {
-    width: 260px;
-    height: 300px;
+    width: 100%;
+    max-width: 360px;   /* 🔹 broader on desktop */
+    height: auto;       /* 🔹 keep natural ratio */
     margin: 0 auto;
     border-radius: 20px;
     overflow: hidden;
@@ -723,7 +726,7 @@ section {
 
 .principal-img {
     width: 100%;
-    height: 100%;
+    height: auto;        /* 🔹 natural scaling */
     object-fit: cover;
     position: relative;
     z-index: 2;
@@ -747,7 +750,7 @@ section {
 
 .principal-info h3 {
     font-family: 'Baloo 2', cursive;
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
     transition: all 0.3s ease;
@@ -760,14 +763,14 @@ section {
 }
 
 .principal-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--sky-blue);
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     opacity: 0.9;
-    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .principal-section:hover .principal-title {
@@ -776,13 +779,20 @@ section {
 }
 
 .principal-description {
-    max-width: 280px;
-    font-size: 0.95rem;
-    text-align: center;
-    margin: 0 auto;
-    line-height: 1.6;
+    font-size: 1rem;
     color: var(--text-light);
+    line-height: 1.6;
+    max-width: 380px;
+    margin: 0 auto;
 }
+
+/* 🔹 Mobile adjustments */
+@media (max-width: 480px) {
+    .principal-image {
+        max-width: 220px;   /* smaller on mobile */
+    }
+}
+
 
 /* Montessori Method Section */
 .method {
